@@ -1,0 +1,316 @@
+/* ---------- GLOBAL ---------- */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #000;
+}
+
+/* ---------- DARK MODE ---------- */
+
+.dark {
+  background: #121212;
+  color: #fff;
+}
+
+.dark body {
+  background: #121212;
+  color: #fff;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: white;
+  padding: 10px 20px;
+
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .header {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+
+/* ---------- FEED ---------- */
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ---------- POST CARD ---------- */
+
+.post {
+  width: 400px;
+  margin: 20px auto;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  background: white;
+
+  overflow: hidden;
+}
+
+.dark .post {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+
+/* ---------- POST HEADER ---------- */
+
+.post-header {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+
+  gap: 10px;
+}
+
+
+/* ---------- PROFILE IMAGE ---------- */
+
+.profile {
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+  min-height: 50px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #ff8501;
+
+  flex-shrink: 0;
+}
+
+
+/* ---------- USERNAME ---------- */
+
+.username {
+  font-weight: bold;
+}
+
+
+/* ---------- POST IMAGE ---------- */
+
+/*
+  IMPORTANT:
+  > means only the direct post image.
+  So the profile image will NOT become 400px wide.
+*/
+
+.post > img {
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ---------- ACTIONS ---------- */
+
+.actions {
+  padding: 10px;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  display: flex;
+  gap: 10px;
+}
+
+.actions span {
+  cursor: pointer;
+}
+
+
+/* ---------- LIKES ---------- */
+
+.likes {
+  padding: 0 10px;
+
+  font-weight: bold;
+
+  margin-top: 0;
+}
+
+
+/* ---------- CAPTION ---------- */
+
+.caption {
+  padding: 0 10px;
+}
+
+
+/* ---------- COMMENT ---------- */
+
+.comment {
+  padding: 0 10px;
+
+  font-size: 14px;
+}
+
+
+/* ---------- COMMENT BOX ---------- */
+
+.comment-box {
+  display: flex;
+
+  padding: 10px;
+
+  align-items: center;
+}
+
+.comment-box input {
+  flex: 1;
+
+  padding: 8px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 5px;
+
+  outline: none;
+}
+
+.dark .comment-box input {
+  background: #333;
+
+  color: white;
+
+  border: 1px solid #555;
+}
+
+.comment-box button {
+  margin-left: 5px;
+}
+
+
+/* ---------- DELETE BUTTON ---------- */
+
+.delete {
+  margin: 10px;
+
+  background: red;
+
+  color: white;
+
+  border: none;
+
+  padding: 5px 10px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+
+/* ---------- INPUT + BUTTON ---------- */
+
+input {
+  padding: 8px;
+
+  margin: 5px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ddd;
+
+  outline: none;
+}
+
+.dark input {
+  background: #333;
+
+  color: white;
+
+  border: 1px solid #555;
+}
+
+button {
+  padding: 8px 12px;
+
+  margin: 5px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  background: #0095f6;
+
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+/* ---------- PROFILE BOX ---------- */
+
+.profile-box {
+  text-align: center;
+
+  margin: 20px;
+}
+
+
+/* ---------- UPLOAD ---------- */
+
+.upload {
+  text-align: center;
+
+  margin: 20px;
+}
+
+
+/* ---------- PAGE TITLE ---------- */
+
+h2 {
+  margin-top: 20px;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 500px) {
+  .post {
+    width: 95%;
+
+    margin: 15px auto;
+  }
+
+  .post > img {
+    height: auto;
+
+    max-height: 450px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+}
